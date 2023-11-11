@@ -17,22 +17,20 @@
                     class="table table-responsive table-light table-striped table-borderless table-hover rounded overflow-hidden">
                     <thead>
                         <tr>
-                            <th scope="col" class="bg-dark text-white">Model</th>
-                            <th scope="col" class="bg-dark text-white">Tahun</th>
-                            <th scope="col" class="bg-dark text-white">Jumlah Penumpang</th>
-                            <th scope="col" class="bg-dark text-white">Manufaktur</th>
-                            <th scope="col" class="bg-dark text-white">Harga</th>
+                            <th scope="col" class="bg-dark text-white">Nama</th>
+                            <th scope="col" class="bg-dark text-white">Alamat</th>
+                            <th scope="col" class="bg-dark text-white">Nomor Telepon</th>
+                            <th scope="col" class="bg-dark text-white">ID Card</th>
                             <th scope="col" class="bg-dark text-white">Aksi</th>
                         </tr>
                     </thead>
                     <tbody>
                         @forelse ($customers as $customer)
                         <tr>
-                            <td>{{ $customer->model }}</td>
-                            <td>{{ $customer->year }}</td>
-                            <td>{{ $customer->passenger_count }}</td>
-                            <td>{{ $customer->manufacturer }}</td>
-                            <td>{{ 'Rp' . $customer->price }}</td>
+                            <td>{{ $customer->name }}</td>
+                            <td>{{ $customer->address }}</td>
+                            <td>{{ $customer->phone_number }}</td>
+                            <td>{{ $customer->id_card }}</td>
                             <td>
                                 <form onsubmit="return confirm('Yakin ingin hapus?');"
                                     action="{{ route('customers.destroy', $customer->customer_id) }}" method="POST">

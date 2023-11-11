@@ -46,7 +46,8 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link {{ $active_vehicles ?? '' }}" aria-current="page" href={{ url('/vehicles') }}>Kendaraan</a>
+                    <a class="nav-link {{ $active_vehicles ?? '' }}" aria-current="page"
+                        href={{ url('/vehicles') }}>Kendaraan</a>
                     <a class="nav-link {{ $active_customers ?? '' }}" href={{ url('/customers') }}>Pelanggan</a>
                     <a class="nav-link {{ $active_orders ?? '' }}" href={{ url('/orders') }}>Pesanan</a>
                 </div>
