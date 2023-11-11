@@ -38,7 +38,7 @@
     <nav class="navbar navbar-dark navbar-expand-lg bg-primary bg-gradient">
         <div class="container-fluid">
             <strong>
-                <a class="navbar-brand" href="#">UC Showroom</a>
+                <a class="navbar-brand" href="{{ url('/') }}">UC Showroom</a>
             </strong>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup"
                 aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
@@ -46,9 +46,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link active" aria-current="page" href="#">Kendaraan</a>
-                    <a class="nav-link" href="#">Pelanggan</a>
-                    <a class="nav-link" href="#">Pesanan</a>
+                    <a class="nav-link {{ $active_vehicles ?? '' }}" aria-current="page" href={{ url('/vehicles') }}>Kendaraan</a>
+                    <a class="nav-link {{ $active_customers ?? '' }}" href={{ url('/customers') }}>Pelanggan</a>
+                    <a class="nav-link {{ $active_orders ?? '' }}" href={{ url('/orders') }}>Pesanan</a>
                 </div>
             </div>
         </div>

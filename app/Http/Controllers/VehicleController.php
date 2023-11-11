@@ -20,7 +20,7 @@ class VehicleController extends Controller
         $vehicles = Vehicle::latest()->paginate(10);
 
         // Render view with vehicles
-        return view('vehicles.index', compact('vehicles'));
+        return view('vehicles.index', ["active_vehicles" => "active"], compact('vehicles'));
     }
 
     public function create(): View
