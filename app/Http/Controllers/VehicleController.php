@@ -37,6 +37,7 @@ class VehicleController extends Controller
 
         // Create vehicle
         Vehicle::create([
+            'vehicle_type' => $request->vehicle_type,
             'model' => $request->model,
             'year' => $request->year,
             'passenger_count' => $request->passenger_count,
@@ -85,6 +86,7 @@ class VehicleController extends Controller
 
             // Update vehicle with new image
             $vehicle->update([
+                'vehicle_type' => $request->vehicle_type,
                 'model' => $request->model,
                 'year' => $request->year,
                 'passenger_count' => $request->passenger_count,
@@ -97,6 +99,7 @@ class VehicleController extends Controller
         } else {
             // Update vehicle without image
             $vehicle->update([
+                'vehicle_type' => $request->vehicle_type,
                 'model' => $request->model,
                 'year' => $request->year,
                 'passenger_count' => $request->passenger_count,

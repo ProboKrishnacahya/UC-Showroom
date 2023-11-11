@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\VehicleController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,4 +18,4 @@ Route::get('/', function () {
     return redirect('vehicles');
 });
 
-Route::resource('/vehicles', \App\Http\Controllers\VehicleController::class);
+Route::resource('/vehicles', VehicleController::class);

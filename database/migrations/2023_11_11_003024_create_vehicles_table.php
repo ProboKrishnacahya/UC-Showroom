@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id('vehicle_id');
+            $table->string('vehicle_type');
             $table->string('model');
             $table->integer('year');
             $table->integer('passenger_count');

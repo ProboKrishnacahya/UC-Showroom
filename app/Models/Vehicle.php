@@ -12,6 +12,7 @@ class Vehicle extends Model
     protected $primaryKey = 'vehicle_id';
 
     protected $fillable = [
+        'vehicle_type',
         'model',
         'year',
         'passenger_count',
