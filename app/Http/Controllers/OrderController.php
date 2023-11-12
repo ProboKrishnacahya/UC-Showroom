@@ -60,7 +60,7 @@ class OrderController extends Controller
     {
         // Get order by ID
         $order = Order::findOrFail($order_id);
-        
+
         // Render view
         $customers = Customer::all();
         $vehicles = Vehicle::all();
@@ -79,6 +79,8 @@ class OrderController extends Controller
             'address' => $request->address,
             'phone_number' => $request->phone_number,
             'id_card' => $request->id_card,
+            'customer_id' => $request->customer_id,
+            'vehicle_id' => $request->vehicle_id
         ]);
 
         // Redirect to index
