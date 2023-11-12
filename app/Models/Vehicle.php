@@ -26,4 +26,9 @@ class Vehicle extends Model
         'fuel_capacity',
         'image'
     ];
+
+    public function orders()
+    {
+        return $this->hasMany(Order::class);
+    }
 }

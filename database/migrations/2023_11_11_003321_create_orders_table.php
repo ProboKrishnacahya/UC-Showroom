@@ -13,12 +13,9 @@ return new class extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id('order_id');
-            $table->unsignedBigInteger('customer_id');
-            $table->unsignedBigInteger('vehicle_id');
-            $table->integer('quantity_ordered');
+            $table->foreignId('customer_id')->constrained('customers', 'customer_id')->onUpdate('cascade')->onDelete('cascade');
+            $table->foreignId('vehicle_id')->constrained('vehicles', 'vehicle_id')->onUpdate('cascade')->onDelete('cascade');
             $table->timestamps();
-            $table->foreign('customer_id')->references('customer_id')->on('customers')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('vehicle_id')->references('vehicle_id')->on('vehicles')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

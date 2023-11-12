@@ -94,6 +94,10 @@ class VehicleController extends Controller
                 'price' => $request->price,
                 'fuel_type' => $request->fuel_type,
                 'trunk_space' => $request->trunk_space,
+                'wheel_count' => $request->wheel_count,
+                'cargo_area_size' => $request->cargo_area_size,
+                'trunk_size' => $request->trunk_size,
+                'fuel_capacity' => $request->fuel_capacity,
                 'image' => $image->hashName()
             ]);
         } else {

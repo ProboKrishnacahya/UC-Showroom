@@ -17,7 +17,6 @@
                     <div class="form-group d-grid">
                         <label>Jenis Kendaraan</label>
                         <select name="vehicle_type" id="vehicle_type" class="form-select">
-                            <option value="" selected disabled>Pilih Jenis Kendaraan</option>
                             <option value="Mobil">Mobil</option>
                             <option value="Motor">Motor</option>
                             <option value="Truck">Truck</option>
